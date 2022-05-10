@@ -1,0 +1,17 @@
+--------------------------------------------Doubts---------------------------------------------------
+------------------------------------------------------------------------------------------------------
+#1 - [Not solved]
+Desc: why we are returning boolean in onOptionsItemSelected(@NonNull MenuItem item) method
+Usage: Used in ChatListFragment
+Ref Docs:
+https://stackoverflow.com/questions/5719287/should-android-onoptionsitemselected-return-true-or-false
+http://developer.android.com/reference/android/app/Activity.html#onOptionsItemSelected%28android.view.MenuItem%29
+//boolean Return false to allow normal menu processing to proceed, true to consume it here.
+Sol:
+------------------------------------------------------------------------------------------------------
+#1 - [Not solved]
+Desc: why we are using orderInCategory in menu xml
+Usage: Used in chat_list_menu
+Ref Docs:
+Sol:
+------------------------------------------------------------------------------------------------------

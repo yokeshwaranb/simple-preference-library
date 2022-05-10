@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/chatListFragment">
+
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.training.simplepreferencelibrary.ChatListFragment"
+        android:label="Chats" >
+        <action
+            android:id="@+id/action_chatListFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.training.simplepreferencelibrary.SettingsFragment"
+        android:label="Settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_accountSettingsFragment"
+            app:destination="@id/accountSettingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountSettingsFragment"
+        android:name="com.training.simplepreferencelibrary.AccountSettingsFragment"
+        android:label="AccountSettings" />
+</navigation>

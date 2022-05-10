@@ -5,8 +5,11 @@
       <map>
         <entry key="..\:/Workspaces/AndroidProjects/ProjectSimple/SimplePreferenceLibrary/app/src/main/res/drawable/ic_baseline_chat_24.xml" value="0.2703125" />
         <entry key="..\:/Workspaces/AndroidProjects/ProjectSimple/SimplePreferenceLibrary/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
+        <entry key="..\:/Workspaces/AndroidProjects/ProjectSimple/SimplePreferenceLibrary/app/src/main/res/layout/fragment_account_settings.xml" value="0.1793478260869565" />
         <entry key="..\:/Workspaces/AndroidProjects/ProjectSimple/SimplePreferenceLibrary/app/src/main/res/layout/fragment_chat_list.xml" value="0.16" />
         <entry key="..\:/Workspaces/AndroidProjects/ProjectSimple/SimplePreferenceLibrary/app/src/main/res/layout/fragment_chat_list2.xml" value="0.1793478260869565" />
+        <entry key="..\:/Workspaces/AndroidProjects/ProjectSimple/SimplePreferenceLibrary/app/src/main/res/layout/fragment_settings.xml" value="0.1793478260869565" />
+        <entry key="..\:/Workspaces/AndroidProjects/ProjectSimple/SimplePreferenceLibrary/app/src/main/res/menu/chat_list_menu.xml" value="0.4" />
       </map>
     </option>
   </component>
