@@ -1,20 +1,14 @@
 package com.training.simplepreferencelibrary;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceFragmentCompat;
 
-public class AccountSettingsFragment extends Fragment {
+public class AccountSettingsFragment extends PreferenceFragmentCompat {
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_account_settings,container, false);
+    public void onCreatePreferences(@Nullable Bundle savedInstanceState, @Nullable String rootKey) {
+        setPreferencesFromResource(R.xml.account_settings, rootKey);
     }
-
 }
