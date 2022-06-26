@@ -1,14 +1,17 @@
 package com.training.simplepreferencelibrary;
 
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.preference.PreferenceManager;
 
-import android.os.Bundle;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     private NavController navController;
     private AppBarConfiguration appBarConfiguration;
@@ -35,5 +38,37 @@ public class MainActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         // (ktx eg) return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
         return navController.navigateUp() || super.onSupportNavigateUp();
+    }
+
+    // Called only after the Preference value is changed
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+
+        if(key == getResources().getString(R.string.key_status)) {
+            String newStatus = sharedPreferences.getString(key, "");
+            Toast.makeText(this, "New Status: " + newStatus, Toast.LENGTH_SHORT).show();
+        }
+
+        if(key == getResources().getString(R.string.key_auto_reply)) {
+            boolean autoReply = sharedPreferences.getBoolean(key, false);
+
+            if (autoReply) {
+                Toast.makeText(this, "Auto Reply: ON", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Auto Reply: OFF", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
+    }
+
+    @Override
+    protected void onPause() {
+        PreferenceManager.getDefaultSharedPreferences(this).unregisterOnSharedPreferenceChangeListener(this);
+        super.onPause();
     }
 }
