@@ -2,6 +2,15 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <EditTextPreference
+        android:key="@string/key_status"
+        android:title="@string/title_status"
+        android:defaultValue="@string/defValue_status"
+        app:iconSpaceReserved="false"
+        android:dialogTitle="@string/title_dialog_status"
+        app:useSimpleSummaryProvider="true"
+        />
+
     <SwitchPreferenceCompat
         app:iconSpaceReserved="false"
         android:title="@string/title_auto_reply"
