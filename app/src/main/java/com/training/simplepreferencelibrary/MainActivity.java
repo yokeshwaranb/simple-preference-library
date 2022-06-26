@@ -2,6 +2,7 @@ package com.training.simplepreferencelibrary;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +12,11 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.preference.PreferenceManager;
 
+import java.util.Set;
+
 public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
+
+    private static final String TAG = "MyMainActivity";
 
     private NavController navController;
     private AppBarConfiguration appBarConfiguration;
@@ -57,6 +62,11 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
             } else {
                 Toast.makeText(this, "Auto Reply: OFF", Toast.LENGTH_SHORT).show();
             }
+        }
+
+        if(key == getResources().getString(R.string.key_public_info)) {
+            Set<String> publicInfo = sharedPreferences.getStringSet(key, null);
+            Log.i(TAG, "Public Info: " + publicInfo.toString());
         }
     }
 
