@@ -45,5 +45,9 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
 
-
+    //--------Preference Library Dependency--------
+    //Ref:https://developer.android.com/jetpack/androidx/releases/preference
+    def preference_version = "1.2.0"
+    // Java language implementation
+    implementation "androidx.preference:preference:$preference_version"
 }
