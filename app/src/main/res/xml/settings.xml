@@ -19,4 +19,15 @@
         android:summary="@string/summary_auto_reply"
         />
 
+    <ListPreference
+        android:dependency="@string/key_auto_reply"
+        android:dialogTitle="@string/title_dialog_reply_time"
+        android:key="@string/key_auto_reply_time"
+        android:title="@string/title_auto_reply_time"
+        app:iconSpaceReserved="false"
+        app:useSimpleSummaryProvider="true"
+        android:entries="@array/entries_auto_reply_time"
+        android:entryValues="@array/values_auto_reply_time"
+        />
+
 </PreferenceScreen>
