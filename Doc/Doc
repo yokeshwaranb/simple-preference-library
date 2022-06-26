@@ -9,9 +9,12 @@ http://developer.android.com/reference/android/app/Activity.html#onOptionsItemSe
 //boolean Return false to allow normal menu processing to proceed, true to consume it here.
 Sol:
 ------------------------------------------------------------------------------------------------------
-#1 - [Not solved]
+#2 - [Not solved]
 Desc: why we are using orderInCategory in menu xml
 Usage: Used in chat_list_menu
 Ref Docs:
 Sol:
+------------------------------------------------------------------------------------------------------
+#3 - [Not solved]
+Desc: Can't able to find SharedPreference file in emulator(Google APIs Intel Atom (x86_64))
 ------------------------------------------------------------------------------------------------------
