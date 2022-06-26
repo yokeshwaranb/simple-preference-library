@@ -51,4 +51,11 @@
         <item>180</item>   <!-- index 4 -->
     </string-array>
 
+    <string-array name="pref_auto_reply_messages">
+        <item>Available</item>                       <!-- index 0 -->
+        <item>Busy</item>                            <!-- index 1 -->
+        <item>Do not disturb</item>                  <!-- index 2 -->
+        <item>Can not talk, chat only</item>         <!-- index 3 -->
+    </string-array>
+
 </resources>
