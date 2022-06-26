@@ -3,6 +3,7 @@ package com.training.simplepreferencelibrary;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -52,8 +53,16 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         statusPref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(@NonNull Preference preference, Object newValue) {
+                String newStatus = (String) newValue;
+                if(newStatus.toLowerCase().contains("bad")){
+
+                    Toast.makeText(getContext(), "Inappropriate Status. Please maintain community guidelines.",
+                            Toast.LENGTH_SHORT).show();
+
+                    return false; // false: reject the new value.
+                }
                 Log.i(TAG, "New Status: " + newValue);
-                return true; // true: accept the new value. false: reject the new value.
+                return true; // true: accept the new value.
             }
         });
     }
